@@ -9,11 +9,12 @@ fa={}
 total_inspected={}
 verbose = false
 
-div = 3 ## Part 1
-rounds = 20 ## Part 1
-# div = 1 ## Part 2
-# rounds = 10000 ## Part 2
-
+# file = 'day11.test' ## Test
+file = 'day11.input'
+# div = 3 ## Part 1
+# rounds = 20 ## Part 1
+div = 1 ## Part 2
+rounds = 10000 ## Part 2
 
 
 def get_throw_target(bored_val, test_val, tr,fa, lcm)
@@ -25,7 +26,7 @@ def get_throw_target(bored_val, test_val, tr,fa, lcm)
   end
 end
 
-File.readlines('day11.test', chomp: true).each do |line|
+File.readlines(file, chomp: true).each do |line|
   case
   when line.match("Monkey")
     count_monkey += 1
